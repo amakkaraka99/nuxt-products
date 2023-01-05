@@ -5,13 +5,17 @@ const { product } = defineProps(["product"]);
   <div
     class="p-3 rounded-md bg-white shadow-sm hover:shadow-xl h-full text-center"
   >
-    <img :src="product.image" alt="product" class="thumb" />
+    <img
+      :src="product.image"
+      alt="product"
+      class="thumb hover:scale-125 hover:transition"
+    />
     <p class="font-bold text-gray-500 m-4">
       {{ product.title }}
     </p>
     <p>price: $ {{ product.price }}</p>
     <NuxtLink :to="`product/${product.id}`"
-      ><p class="bg-[#12b488] text-white py-2 rounded-md text-sm my-4">
+      ><p class="bg-[#1232b4] text-white py-2 rounded-md text-sm my-4">
         View Details
       </p>
     </NuxtLink>
